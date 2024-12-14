@@ -18,17 +18,17 @@ Dataset Overview:
 
   	o	Two untransformed features:
 
-       	Time: Not relevant for modeling.
+            Time: Not relevant for modeling.
 
-   	   	Amount: Will be scaled.
+   	       	Amount: Will be scaled.
 
 3.	Target Column:
 
     o	Class: Binary label:
 
-  	   	0: Non-fraudulent
+  	       	0: Non-fraudulent
 
-  	   	1: Fraudulent.
+  	       	1: Fraudulent.
 
 4.	Data Characteristics:
 
@@ -51,9 +51,9 @@ Data Preprocessing:
 
     o	Split data using train_test_split() with a 70-30 ratio:
 
-       	70%: Training set.
+           	70%: Training set.
 
-  	   	30%: Testing set.
+  	       	30%: Testing set.
 
     o	Set a random seed to ensure reproducibility.
 ________________________________________
