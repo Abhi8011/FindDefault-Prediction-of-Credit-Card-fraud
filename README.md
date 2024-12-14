@@ -18,7 +18,7 @@ Dataset Overview:
 
   	o	Two untransformed features:
 
-            Time: Not relevant for modeling.
+               Time: Not relevant for modeling.
 
    	       	Amount: Will be scaled.
 
