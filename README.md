@@ -18,51 +18,78 @@ Dataset Overview:
 
   	o	Two untransformed features:
 
-      	Time: Not relevant for modeling.
-    		Amount: Will be scaled.
+    	Time: Not relevant for modeling.
 
-2.	Target Column:
+  		Amount: Will be scaled.
+
+3.	Target Column:
 
     o	Class: Binary label:
 
-  	  	0: Non-fraudulent
+  	   	0: Non-fraudulent
 
-  	  	1: Fraudulent.
+  	   	1: Fraudulent.
 
-3.	Data Characteristics:
+4.	Data Characteristics:
 
     o	No missing values; null-value handling is unnecessary.
 
     o	Imbalance Issue: Genuine transactions exceed 99%, while fraudulent ones account for only 0.17%.
 ________________________________________
+
 Data Preprocessing:
+
 1.	Scaling:
-o	Transform the "Amount" feature to scale values.
-o	Drop the original "Amount" and replace it with the scaled version.
-o	Drop the "Time" column.
-2.	Data Splitting:
-o	Split data using train_test_split() with a 70-30 ratio:
-	70%: Training set.
-	30%: Testing set.
-o	Set a random seed to ensure reproducibility.
+ 
+    o	Transform the "Amount" feature to scale values.
+
+  	o	Drop the original "Amount" and replace it with the scaled version.
+
+  	o	Drop the "Time" column.
+
+3.	Data Splitting:
+
+    o	Split data using train_test_split() with a 70-30 ratio:
+
+       	70%: Training set.
+
+  	   	30%: Testing set.
+
+    o	Set a random seed to ensure reproducibility.
 ________________________________________
+
 Machine Learning Implementation:
+
 1.	Goal: Binary classification to predict fraudulent transactions.
+
 2.	Algorithms Tested:
-o	Decision Tree: Builds straightforward "if-then-else" rules.
-o	Random Forest: Combines multiple decision trees using the "bagging" method for improved accuracy.
+
+    o	Decision Tree: Builds straightforward "if-then-else" rules.
+
+    o	Random Forest: Combines multiple decision trees using the "bagging" method for improved accuracy.
 ________________________________________
+
 Challenges and Solutions:
+
 1.	Class Imbalance:
-o	Models trained on imbalanced data tend to favor the majority class (genuine transactions).
-o	This can lead to poor performance in detecting the minority class (fraudulent transactions).
+
+    o	Models trained on imbalanced data tend to favor the majority class (genuine transactions).
+
+    o	This can lead to poor performance in detecting the minority class (fraudulent transactions).
+
 2.	Solution: Synthetic Minority Oversampling Technique (SMOTE):
-o	Oversamples the minority class to balance the dataset.
-o	Results in a significant performance improvement, achieving 99%+ accuracy.
+
+  	o	Oversamples the minority class to balance the dataset.
+
+    o	Results in a significant performance improvement, achieving 99%+ accuracy.
 ________________________________________
+
 Performance Analysis:
-•	Random Forest outperformed Decision Tree, especially after addressing the class imbalance using SMOTE.
+
+   •	Random Forest outperformed Decision Tree, especially after addressing the class imbalance using SMOTE.
 ________________________________________
+
 Model Deployment:
-•	Save the preprocessed dataset and trained model using Pickle for future deployment.
+   
+   •	Save the preprocessed dataset and trained model using Pickle for future deployment.
 
